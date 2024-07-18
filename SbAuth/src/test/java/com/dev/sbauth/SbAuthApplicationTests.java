@@ -1,13 +1,13 @@
-package java.com.dev.sbcasetudysp;
+package com.dev.sbauth;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SbCasetudySpApplicationTests {
+class SbAuthApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }

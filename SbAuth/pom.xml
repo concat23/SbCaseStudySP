@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.dev</groupId>
-    <artifactId>EntityPojo</artifactId>
+    <artifactId>SbAuth</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>EntityPojo</name>
-    <description>EntityPojo</description>
+    <name>SbAuth</name>
+    <description>SbAuth</description>
     <url/>
     <licenses>
         <license/>
@@ -62,11 +62,6 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.28</version> <!-- Use the appropriate version -->
         </dependency>
     </dependencies>
 
