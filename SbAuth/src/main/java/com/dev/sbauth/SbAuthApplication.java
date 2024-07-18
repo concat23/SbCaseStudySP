@@ -19,7 +19,10 @@ public class SbAuthApplication {
         System.out.println("Generated Secret Code: " + secretCode);
 
         SpringApplication.run(SbAuthApplication.class, args);
+
     }
+
+
 
     public static String generateSecretCode(int byteSize) {
         byte[] randomBytes = new byte[byteSize];

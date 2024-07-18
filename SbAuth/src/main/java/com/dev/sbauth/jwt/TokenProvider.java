@@ -1,6 +1,6 @@
 package com.dev.sbauth.jwt;
 
-import com.dev.entitypojo.auth.TokenDto;
+import com.dev.sbauth.auth.TokenDto;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;

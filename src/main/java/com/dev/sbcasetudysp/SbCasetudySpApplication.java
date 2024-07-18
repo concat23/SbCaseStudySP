@@ -5,11 +5,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 
-@SpringBootApplication(exclude={DataSourceAutoConfiguration.class, SecurityAutoConfiguration.class})
+import java.util.Collections;
+
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, SecurityAutoConfiguration.class})
 public class SbCasetudySpApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SbCasetudySpApplication.class, args);
+		SpringApplication application = new SpringApplication(SbCasetudySpApplication.class);
+		application.setDefaultProperties(Collections.singletonMap("server.port", "8081"));
+		application.run(args);
 	}
-
 }

@@ -1,9 +1,6 @@
 package com.dev.sbauth.member;
 
-import com.dev.entitypojo.member.Member;
-import com.dev.entitypojo.member.MemberResponseDto;
 import com.dev.sbauth.config.SecurityUtil;
-import com.dev.sbauth.member.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

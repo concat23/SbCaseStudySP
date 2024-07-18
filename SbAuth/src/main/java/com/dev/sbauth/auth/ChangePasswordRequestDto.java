@@ -1,4 +1,4 @@
-package com.dev.entitypojo.auth;
+package com.dev.sbauth.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

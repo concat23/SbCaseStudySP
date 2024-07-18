@@ -1,4 +1,4 @@
-package com.dev.entitypojo.member;
+package com.dev.sbauth.member;
 
 import jakarta.persistence.*;
 import lombok.Builder;

@@ -1,9 +1,8 @@
 package com.dev.sbauth.auth;
 
-import com.dev.entitypojo.auth.TokenDto;
-import com.dev.entitypojo.member.Member;
-import com.dev.entitypojo.member.MemberRequestDto;
-import com.dev.entitypojo.member.MemberResponseDto;
+import com.dev.sbauth.member.Member;
+import com.dev.sbauth.member.MemberRequestDto;
+import com.dev.sbauth.member.MemberResponseDto;
 import com.dev.sbauth.jwt.TokenProvider;
 import com.dev.sbauth.member.MemberRepository;
 import lombok.RequiredArgsConstructor;

@@ -1,4 +1,4 @@
-package com.dev.entitypojo.member;
+package com.dev.sbauth.member;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

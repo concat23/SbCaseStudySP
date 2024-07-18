@@ -33,7 +33,6 @@
 		<maven.compiler.target>17</maven.compiler.target>
 	</properties>
 	<modules>
-		<module>EntityPojo</module>
 		<module>SbAuth</module>
 	</modules>
 	<dependencies>
