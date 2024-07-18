@@ -12,6 +12,7 @@
 	<artifactId>sbcasetudysp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SbCasetudySP</name>
+	<packaging>pom</packaging>
 	<description>Springboot Case Study SP</description>
 	<url/>
 	<licenses>
@@ -29,6 +30,9 @@
 	<properties>
 		<java.version>17</java.version>
 	</properties>
+	<modules>
+		<module>EntityPojo</module>
+	</modules>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
