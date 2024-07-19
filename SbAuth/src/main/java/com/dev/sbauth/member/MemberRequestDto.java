@@ -1,5 +1,7 @@
 package com.dev.sbauth.member;
 
+import com.dev.sbauth.entity.Authority;
+import com.dev.sbauth.entity.Member;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

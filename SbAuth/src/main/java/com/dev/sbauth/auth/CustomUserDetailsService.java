@@ -1,7 +1,7 @@
 package com.dev.sbauth.auth;
 
-import com.dev.sbauth.member.Member;
-import com.dev.sbauth.member.MemberRepository;
+import com.dev.sbauth.entity.Member;
+import com.dev.sbauth.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

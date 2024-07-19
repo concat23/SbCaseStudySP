@@ -1,14 +1,17 @@
-package com.dev.sbauth.member;
+package com.dev.sbauth.entity;
+
 
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Entity
+
 @Getter
 @Builder
 @NoArgsConstructor
+@Entity
+@Table(name = "members")
 public class Member {
 
     @Id

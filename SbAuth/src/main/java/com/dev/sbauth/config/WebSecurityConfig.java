@@ -36,27 +36,39 @@ public class WebSecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        // Disable default configurations that we want to customize
         http
-                .httpBasic(HttpBasicConfigurer::disable)  // Disables HTTP Basic authentication
-                .csrf(CsrfConfigurer::disable)            // Disables CSRF protection
-                .sessionManagement(sessionManagement ->
-                        sessionManagement
-                                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)) // Sets session policy to stateless
-                .exceptionHandling(exceptionHandling ->
-                        exceptionHandling
-                                .authenticationEntryPoint(jwtAuthenticationEntryPoint) // Handles authentication entry points
-                                .accessDeniedHandler(jwtAccessDeniedHandler))  // Handles access denied scenarios
+                .csrf(CsrfConfigurer::disable)
                 .authorizeHttpRequests(authorizeRequests ->
                         authorizeRequests
-                                .requestMatchers("/auth/**").permitAll() // Permits all requests to /auth/**
-                                .anyRequest().authenticated()); // Requires authentication for all other requests
+                                .requestMatchers(
+                                        "/auth/**",
+                                        "/v3/api-docs",
+                                        "/swagger-ui.html",
+                                        "/swagger-ui/**",
+                                        "/swagger-resources/**",
+                                        "/configuration/ui",
+                                        "/configuration/security",
+                                        "/webjars/**",
+                                        "/docs/swagger.yaml"
+                                )
+                                .permitAll()
+                                .anyRequest().authenticated()
+                )
+                .sessionManagement(sessionManagement ->
+                        sessionManagement.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                )
+                .exceptionHandling(exceptionHandling ->
+                        exceptionHandling
+                                .authenticationEntryPoint(jwtAuthenticationEntryPoint)
+                                .accessDeniedHandler(jwtAccessDeniedHandler)
+                );
 
         JwtFilter jwtFilter = new JwtFilter(tokenProvider);
         http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }
+
 
 
 
